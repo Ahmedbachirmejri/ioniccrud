@@ -1,0 +1,21 @@
+<ion-list>
+  <ion-button (click)="goToAddProductPage()">Ajouter un nouveau produit</ion-button>
+  <ion-searchbar [(ngModel)]="searchTerm" (input)="filterProducts()"></ion-searchbar>
+  
+
+  <ion-item lines="none">
+    <ion-label class="column-title">Nom</ion-label>
+    <ion-label class="column-title">Prix</ion-label>
+    <ion-label class="column-title">Quantité</ion-label>
+    <ion-label class="column-title">Actions</ion-label>
+  </ion-item>
+
+
+  <ion-item *ngFor="let product of filteredProducts">
+    <ion-label>{{ product.nom }}</ion-label>
+    <ion-label>{{ product.prix }}</ion-label>
+    <ion-label>{{ product.quantite }}</ion-label>
+    <ion-button (click)="updateProduct(product)">Modifier</ion-button>
+    <ion-button (click)="deleteProduct(product)">Supprimer</ion-button>
+  </ion-item>
+</ion-list>

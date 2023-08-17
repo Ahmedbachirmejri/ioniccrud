@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label>Nom</ion-label>
+      <ion-input formControlName="nom" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Prix</ion-label>
+      <ion-input formControlName="prix" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Quantite</ion-label>
+      <ion-input formControlName="quantite" type="number"></ion-input>
+    </ion-item>
+    <!-- Add other form controls for other properties -->
+
+    <ion-button type="submit" [disabled]="productForm.invalid">Update</ion-button>
+  </form>
+</ion-content>

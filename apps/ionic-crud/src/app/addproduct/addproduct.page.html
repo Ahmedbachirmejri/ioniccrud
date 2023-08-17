@@ -1,0 +1,26 @@
+<!-- add-product.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajouter un nouveau produit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nom</ion-label>
+      <ion-input type="text" [(ngModel)]="newProduct.nom"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Prix</ion-label>
+      <ion-input type="number" [(ngModel)]="newProduct.prix"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Quantité</ion-label>
+      <ion-input type="number" [(ngModel)]="newProduct.quantite"></ion-input>
+    </ion-item>
+    <!-- Add other form controls for other properties -->
+  </ion-list>
+
+  <ion-button expand="full" (click)="onSubmit()">Ajouter le produit</ion-button>
+</ion-content>

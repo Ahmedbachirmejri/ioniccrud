@@ -1,0 +1,13 @@
+{
+  "name": "ionic-crud",
+  "integrations": {
+    "capacitor": {}
+  },
+  "proxies": [
+    {
+      "path": "",
+      "proxyUrl": "http://localhost:8000"
+    }
+  ],
+  "type": "angular"
+}
