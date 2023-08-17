@@ -7,8 +7,8 @@
     "config": {
       "SourceDir": "src",
       "DistributionDir": "www",
-      "BuildCommand": "npm.cmd run-script build",
-      "StartCommand": "ionic serve"
+      "BuildCommand": "npx nx build",
+      "StartCommand": "npx nx serve"
     }
   },
   "providers": [
